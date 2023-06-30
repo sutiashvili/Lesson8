@@ -1,0 +1,183 @@
+
+
+
+body{
+    background-image: url(../images/mario.jpg);
+    height: 90vh;
+    background-size:cover;
+    position: relative;
+    background-repeat: no-repeat;
+}
+*{
+  box-sizing: border-box;}
+
+  .goombas1{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    margin-bottom: 100px;
+    transform: translate(500px,565px);
+    z-index: 1;
+  }
+
+  @keyframes goombas1 {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(200px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .element {
+    position: relative;
+    animation: goombas1 3s ease-in-out infinite;
+  }
+
+
+
+ 
+  .goombas2{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: translate(450px,565px);
+    z-index: 2;
+  }
+
+   .goombas3{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: translate(400px,565px);
+    z-index: 3;
+  }
+
+  .iakitu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: translate(0px,0px);
+    z-index: 2;
+    /* background-color: white; */
+    animation: fly;
+  }
+
+
+
+  @keyframes fly {
+    0%   { left: 0px; top: 0px;}
+  25%  {left: 1000px; top: 0px;}
+  50%  {left: 200px; top: 200px;}
+  75%  {left: 0px; top: 200px;}
+  100% {left: 0px; top: 0px;}
+  }
+
+  .element2{
+    position: relative;
+    animation: fly 10s ease-in-out infinite;
+  }
+
+
+  .fire-holder{
+    margin-left: 920px;
+    margin-top: 355px;
+    width: 60px;
+    position: relative;
+    z-index: 4;
+  }
+
+  .fire{
+    margin-left: 940px;
+    margin-top: -30px;
+    height: 100px;
+    z-index: 5;
+    position: absolute;
+    
+  }
+
+  .rotate img{
+    animation: rotate infinite;
+    
+  }
+  
+  .rotate .fire {
+    animation: rotate 4s linear infinite;
+    transform-origin:top;
+
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  
+  /* .drakon{
+    margin-left: 1200px;
+    margin-top: 105px;
+    animation: jump 5s infinite;
+  } */
+  
+  .drakon {
+    margin-left: 1200px;
+    margin-top: 80px;
+    width: 80px;
+    height: 100px;
+    animation: jump 10s infinite;
+  }
+  
+  .jump{
+    transform: translate(1px,-5px);
+
+  }
+  
+  @keyframes jump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+    75% { transform: translateY(-250px); }
+  }
+
+.mario{
+  position: relative;
+  margin-top: -25px;
+}
+
+.tube{
+  margin-top: 500px;
+  position: absolute;
+  z-index: 8;
+}
+
+.mauricio{
+  margin-top: -100px;
+  width: 50px;
+  height: 100px;
+  
+  
+  
+}
+
+
+
+
+
+.move-up {
+  position: absolute;
+  /* z-index: 88; */
+  animation: move-up 10s infinite;
+  transform: translate(1px,-5px);
+  position: absolute;
+  z-index: 4;
+  margin-top: 50px;
+ 
+}
+
+@keyframes move-up {
+  0% { transform: translateY(450px); }
+  50% { transform: translateY(400px); }
+  75% { transform: translateY(480px); }
+}
